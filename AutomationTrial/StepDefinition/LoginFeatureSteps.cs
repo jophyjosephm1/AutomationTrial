@@ -29,12 +29,8 @@ namespace AutomationTrial
         public void GivenIEnterUsernameAndPassword(Table table)
         {
             dynamic data = table.CreateDynamicInstance();
-
-            //LoginPage.GetUserName().SendKeys((string)data.UserName);
-            //LoginPage.GetPassword().SendKeys((string)data.Password);
-
+                      
             Log.Info("Entering the username and password");
-            Log.Error("Element can't find .......");
             driver.FindElement(By.XPath("//input[@id='ctl00_ctl00_cph1_cph1_ctrlCustomerLogin_LoginForm_UserName']")).SendKeys((string)data.UserName);
             driver.FindElement(By.XPath("//input[@id='ctl00_ctl00_cph1_cph1_ctrlCustomerLogin_LoginForm_Password']")).SendKeys((string)data.Password);
 
@@ -43,22 +39,23 @@ namespace AutomationTrial
         [Given(@"I click login")]
         public void GivenIClickLogin()
         {
-            //LoginPage.LoginButton().Click();
+            Log.Info("Clicking on login button");
             driver.FindElement(By.XPath("//input[@value='Log in']")).Click();
         }
         
         [Then(@"I should see user logged in to the application")]
         public void ThenIShouldSeeUserLoggedInToTheApplication()
         {
+            Log.Info("User logged in and checking for <Logout> button");
             var logout = driver.FindElements(By.XPath("//a[@class='ico-logout']"))[0];
-
             Assert.IsTrue(logout.Displayed);
 
         }
-
+        //tear down
         [AfterScenario]
         public void CleanUp()
         {
+            Log.Info("Quiting the browser");
             driver.Quit();
         }
 

@@ -21,4 +21,3 @@ C:\Users\Jophy\source\repos\AutomationTrial\AutomationTrial\obj\Debug\Automation
 C:\Users\Jophy\source\repos\AutomationTrial\AutomationTrial\obj\Debug\AutomationTrial.csproj.CopyComplete
 C:\Users\Jophy\source\repos\AutomationTrial\AutomationTrial\obj\Debug\AutomationTrial.exe
 C:\Users\Jophy\source\repos\AutomationTrial\AutomationTrial\obj\Debug\AutomationTrial.pdb
-C:\Users\Jophy\source\repos\AutomationTrial\AutomationTrial\obj\Debug\AutomationTrial.csprojAssemblyReference.cache
