@@ -23,6 +23,8 @@ namespace AutomationTrial.Helper
         private static readonly ILog Log =
               LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        //Accessing the Rest endpoint
+
         public void SetEndpoint()
         {
 
@@ -33,7 +35,7 @@ namespace AutomationTrial.Helper
 
         }
         
-        //Accessing the Rest end point
+        //Getting the http response status
 
         public HttpStatusCode GetTheResponse()
         {
@@ -44,6 +46,7 @@ namespace AutomationTrial.Helper
             return statusCode;
         }
 
+        //Retreving the Rest data
         public void RetrieiveTheData()
         {
 
@@ -52,7 +55,7 @@ namespace AutomationTrial.Helper
             _response = _client.Execute(_request);
         }
 
-
+        //Getting received objects count
         public int ObjCount()
         {
             Log.Info("Deserializersing Json data in to <List> objects and getting the total count.....");
